@@ -7,8 +7,8 @@ Berikut langkah langkah konfigurasi.
 3. Jalankan program
 4. Untuk testing API, gunakan postman atau lainnya, berikut adalah list dari API
 
-#Clothes CRUD
-##1. Post/add clothes
+### Clothes CRUD
+#### 1. Post/add clothes
 ```
 url : localhost:8080/clothes
 method : POST
@@ -22,22 +22,22 @@ request body (JSON):
     "price": 250000
 }
 ```
-##2. Get all clothes
+#### 2. Get all clothes
 ```
 url : localhost:8080/clothes
 method : GET
 ```
-##3. Get clothes by id
+#### 3. Get clothes by id
 ```
 url : localhost:8080/clothes/{id}
 method : GET
 ```
-##4. Get clothes by Brand
+#### 4. Get clothes by Brand
 ```
 url : localhost:8080/clothes?brand={brand}
 method : GET
 ```
-##5. Update clothes
+#### 5. Update clothes
 ```
 url : localhost:8080/clothes
 method : PUT
@@ -52,14 +52,14 @@ request body (JSON):
    "price": 100000
 }
 ```
-##6. Delete clothes by id
+#### 6. Delete clothes by id
 ```
 url : localhost:8080/clothes/{id}
 method : DELETE
 ```
 
-#User
-##1. Post/add user
+### User
+#### 1. Post/add user
 ```
 url : localhost:8080/users
 method : POST
@@ -72,17 +72,17 @@ request body (JSON):
     "password": "default"
 }
 ```
-##2. Get all users
+#### 2. Get all users
 ```
 url : localhost:8080/users
 method : GET
 ```
-##3. Get user by id
+#### 3. Get user by id
 ```
 url : localhost:8080/users/{id}
 method : GET
 ```
-##4. Update user
+#### 4. Update user
 ```
 url : localhost:8080/users
 method : PUT
@@ -96,14 +96,14 @@ request body (JSON):
     "password": "pass123"
 }
 ```
-##6. Delete user by id
+#### 6. Delete user by id
 ```
 url : localhost:8080/users/{id}
 method : DELETE
 ```
 
-#Transaction
-##Buy clothes
+### Transaction
+#### Buy clothes
 ```
 url : localhost:8080/transaction
 method : POST
