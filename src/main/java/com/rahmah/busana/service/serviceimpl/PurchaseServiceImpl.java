@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 @Service
@@ -36,6 +37,9 @@ public class PurchaseServiceImpl implements PurchaseService {
     public Purchase transaction(Purchase purchase) {
         Purchase buy = purchaseRepository.save(purchase);
         User user = userService.getUserById(purchase.getUser().getId());
+        DateTimeFormatter dtf =DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate now = LocalDate.now();
+        buy.setPurchaseDate(dtf.format(now));
         buy.setUser(user);
         Double grandTotal = 0.0;
         for (PurchaseDetail purchaseDetail : purchase.getPurchaseDetails()) {

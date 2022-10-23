@@ -20,8 +20,7 @@ public class Purchase {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "transaction_date")
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private Date purchaseDate;
+    private String purchaseDate;
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
@@ -29,4 +28,6 @@ public class Purchase {
     @OneToMany(mappedBy = "purchase")
     @JsonIgnoreProperties("purchase")
     private List<PurchaseDetail> purchaseDetails = new ArrayList<>();
+
+
 }
